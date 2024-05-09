@@ -1,0 +1,18 @@
+Package: reTCR
+Title: TCR Repertoire Analysis in R
+Version: 0.0.0.9000
+Authors@R: 
+    c(
+    person("Abdullah", "Al Nahid", email= "abdnahid56@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-4390-0768")),
+    person("Karishma", "Chhugani", email = "chhugani@usc.edu", role = c("aut"), comment = c(ORCID = "")),
+    person("Ella Maria", "Schwab", email = "eschwab@usc.edu", role = c("aut"), comment = c(ORCID = "")),
+    person("Serghei", "Mangul", email = "mangul@usc.edu", role = c("aut", "rev"), comment = c(ORCID = "")),
+    )
+Description: The reTCR R package offers a streamlined framework for processing and analyzing TCR repertoire data from high-throughput sequencing experiments. It leverages the MiXCR software with custom presets tailored to different library preparation methods, ensuring standardized data processing for comparative studies. The package integrates seamlessly with R, enabling researchers to query and filter TCR repertoire data based on various metadata characteristics such as disease phenotype, age, gender, and library preparation methods. Additionally, it incorporates the pyTCR tool, which calculates a comprehensive set of diversity metrics, including the Shannon-Wiener index, Gini coefficient, weighted usage of V, D, and J genes, and the mean length of CDR3 nucleotide sequences, providing a robust platform for in-depth immune repertoire analysis.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
