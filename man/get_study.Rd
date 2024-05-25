@@ -2,25 +2,22 @@
 % Please edit documentation in R/get_study.R
 \name{get_study}
 \alias{get_study}
-\title{Get pyTCR metrics of a study
-Retrieve metrics based on project ID.}
+\title{Get pyTCR data of a project}
 \usage{
 get_study(id)
 }
 \arguments{
-\item{id}{A character string specifying the ID of the data for which metrics are to be retrieved.}
+\item{id}{Project ID.}
 }
 \value{
-A data frame containing the requested metrics.
+Data frame with the project data.
 }
 \description{
-Get pyTCR metrics of a study
-Retrieve metrics based on project ID.
+Get pyTCR data of a project
 }
 \examples{
-\dontrun{
-# Retrieve project with ID "PRJNA473147"
+\dontrun{ 
+# Get data with ID "PRJNA473147"
 project <- reTCR::get_study(id="PRJNA473147")
 }
-
 }
