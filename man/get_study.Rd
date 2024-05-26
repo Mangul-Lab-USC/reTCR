@@ -7,17 +7,17 @@
 get_study(id)
 }
 \arguments{
-\item{id}{Project ID.}
+\item{id}{Character. Project ID.}
 }
 \value{
-Data frame with the project data.
+An object of class \code{reTCRProj}.
 }
 \description{
-Get pyTCR data of a project
+This function retrieves the pyTCR data of a given project by its ID and returns
+an object of class \code{reTCRProj}.
 }
 \examples{
-\dontrun{ 
-# Get data with ID "PRJNA473147"
-project <- reTCR::get_study(id="PRJNA473147")
+\dontrun{
+proj <- reTCR::get_study(id = "PRJNA473147")
 }
 }
