@@ -2,15 +2,15 @@
 #'
 #' A class to represent motif data.
 #'
-#' @slot aa_count A numeric value representing the amino acid count.
-#' @slot nucl_count A numeric value representing the nucleotide count.
-#' @slot spectratype A data frame containing spectratype data.
+#' @slot aa_spectratype aa spectratype data.
+#' @slot aa_max_spectratype aa max spectratype data.
+#' @slot aa_motif_count aa motif count data.
 #' @exportClass Motif
 setClass("Motif",
   slots = c(
-    aa_count = "numeric",
-    nucl_count = "numeric",
-    spectratype = "data.frame"
+    aa_spectratype = "data.frame",
+    aa_max_spectratype = "data.frame",
+    aa_motif_count = "data.frame"
   )
 )
 

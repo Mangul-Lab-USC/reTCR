@@ -10,10 +10,10 @@ A class to represent motif data.
 \section{Slots}{
 
 \describe{
-\item{\code{aa_count}}{A numeric value representing the amino acid count.}
+\item{\code{aa_spectratype}}{aa spectratype data.}
 
-\item{\code{nucl_count}}{A numeric value representing the nucleotide count.}
+\item{\code{aa_max_spectratype}}{aa max spectratype data.}
 
-\item{\code{spectratype}}{A data frame containing spectratype data.}
+\item{\code{aa_motif_count}}{aa motif count data.}
 }}
 
