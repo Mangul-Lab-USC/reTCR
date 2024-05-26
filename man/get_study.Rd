@@ -13,8 +13,7 @@ get_study(id)
 An object of class \code{reTCRProj}.
 }
 \description{
-This function retrieves the pyTCR data of a given project by its ID and returns
-an object of class \code{reTCRProj}.
+Retrieve the pyTCR data of a project by its ID.
 }
 \examples{
 \dontrun{

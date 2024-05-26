@@ -4,11 +4,13 @@
 #'
 #' @slot aa_count A numeric value representing the amino acid count.
 #' @slot nucl_count A numeric value representing the nucleotide count.
+#' @slot spectratype A data frame containing spectratype data.
 #' @exportClass Motif
 setClass("Motif",
   slots = c(
     aa_count = "numeric",
-    nucl_count = "numeric"
+    nucl_count = "numeric",
+    spectratype = "data.frame"
   )
 )
 
@@ -41,4 +43,3 @@ setClass("reTCRProj",
     diversity = "Diversity"
   )
 )
-

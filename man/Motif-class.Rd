@@ -13,5 +13,7 @@ A class to represent motif data.
 \item{\code{aa_count}}{A numeric value representing the amino acid count.}
 
 \item{\code{nucl_count}}{A numeric value representing the nucleotide count.}
+
+\item{\code{spectratype}}{A data frame containing spectratype data.}
 }}
 
