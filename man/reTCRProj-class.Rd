@@ -12,8 +12,6 @@ A class to represent a reTCR project
 \describe{
 \item{\code{data}}{contains the main data for the project.}
 
-\item{\code{motif}}{contains motif information.}
-
-\item{\code{diversity}}{contains diversity information.}
+\item{\code{basic}}{contains basic analysis information.}
 }}
 

@@ -1,3 +1,27 @@
+#' Class "Basic"
+#'
+#' A class to represent basic analysis data.
+#'
+#' @slot summary_data summary data
+#' @slot reads_count read counts
+#' @slot clonotype_count clonotype count
+#' @slot mean_freq mean frequency
+#' @slot geomean_freq geometric mean of clonotype frequency
+#' @slot mean_cdr3nt_length mean CDR3 nucleotide length
+#' @slot convergence mean of the unique CDR3 count in each sample
+#' @exportClass Basic
+setClass("Basic",
+  slots = c(
+    summary_data = "data.frame",
+    reads_count = "data.frame",
+    clonotype_count = "data.frame",
+    mean_freq = "data.frame",
+    geomean_freq = "data.frame",
+    mean_cdr3nt_length = "data.frame",
+    convergence = "data.frame"
+  )
+)
+
 #' Class "Motif"
 #'
 #' A class to represent motif data.
@@ -33,13 +57,11 @@ setClass("Diversity",
 #' A class to represent a reTCR project
 #'
 #' @slot data contains the main data for the project.
-#' @slot motif contains motif information.
-#' @slot diversity contains diversity information.
+#' @slot basic contains basic analysis information.
 #' @exportClass reTCRProj
 setClass("reTCRProj",
   slots = c(
     data = "data.frame",
-    motif = "Motif",
-    diversity = "Diversity"
+    basic = "Basic"
   )
 )

@@ -25,4 +25,5 @@ Imports:
     ggplot2,
     dplyr,
     methods,
-    utils
+    utils,
+    magrittr

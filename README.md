@@ -11,15 +11,20 @@ The goal of reTCR is to ...
 You can install the development version of reTCR like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+devtools::install_github("Mangul-Lab-USC/reTCR")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
 ``` r
 library(reTCR)
-## basic example code
+
+proj <- reTCR::get_study(id = "PRJNA473147")
+
+# view data
+head(proj@data)
+
+# view basic analysis summary data
+head(proj@basic@summary_data)
 ```
 
