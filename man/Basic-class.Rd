@@ -20,8 +20,10 @@ A class to represent basic analysis data.
 
 \item{\code{geomean_freq}}{geometric mean of clonotype frequency}
 
-\item{\code{mean_cdr3nt_length}}{mean CDR3 nucleotide length}
+\item{\code{mean_cdr3nt_len}}{mean CDR3 nucleotide length}
 
 \item{\code{convergence}}{mean of the unique CDR3 count in each sample}
+
+\item{\code{spectratype}}{spectratype data}
 }}
 

@@ -7,8 +7,9 @@
 #' @slot clonotype_count clonotype count
 #' @slot mean_freq mean frequency
 #' @slot geomean_freq geometric mean of clonotype frequency
-#' @slot mean_cdr3nt_length mean CDR3 nucleotide length
+#' @slot mean_cdr3nt_len mean CDR3 nucleotide length
 #' @slot convergence mean of the unique CDR3 count in each sample
+#' @slot spectratype spectratype data
 #' @exportClass Basic
 setClass("Basic",
   slots = c(
@@ -17,8 +18,9 @@ setClass("Basic",
     clonotype_count = "data.frame",
     mean_freq = "data.frame",
     geomean_freq = "data.frame",
-    mean_cdr3nt_length = "data.frame",
-    convergence = "data.frame"
+    mean_cdr3nt_len = "data.frame",
+    convergence = "data.frame",
+    spectratype = "data.frame"
   )
 )
 
