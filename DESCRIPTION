@@ -1,18 +1,18 @@
 Package: reTCR
 Title: TCR Repertoire Analysis in R
-Version: 0.0.0.9000
+Version: 0.0.0.90
 Authors@R: 
     c(
-    person("Abdullah", "Al Nahid", email= "abdnahid56@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-4390-0768")),
-    person("Karishma", "Chhugani", email = "chhugani@usc.edu", role = c("aut")),
     person("Ella Maria", "Schwab", email = "eschwab@usc.edu", role = c("aut")),
+    person("Karishma", "Chhugani", email = "chhugani@usc.edu", role = c("aut")),
+    person("Abdullah", "Al Nahid", email= "abdnahid56@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-4390-0768")),
     person("Serghei", "Mangul", email = "mangul@usc.edu", role = c("aut", "rev"))
     )
 Description: The reTCR R package offers a streamlined framework for processing and analyzing TCR repertoire data from high-throughput sequencing experiments. It leverages the MiXCR software with custom presets tailored to different library preparation methods, ensuring standardized data processing for comparative studies. The package integrates seamlessly with R, enabling researchers to query and filter TCR repertoire data based on various metadata characteristics such as disease phenotype, age, gender, and library preparation methods. Additionally, it incorporates the pyTCR tool, which calculates a comprehensive set of diversity metrics, including the Shannon-Wiener index, Gini coefficient, weighted usage of V, D, and J genes, and the mean length of CDR3 nucleotide sequences, providing a robust platform for in-depth immune repertoire analysis.
 License: MIT + file LICENSE
 Encoding: UTF-8
-URL: https://github.com/nahid18/reTCR, https://nahid18.github.io/reTCR, https://mangul-lab-usc.github.io/reTCR/
-BugReports: https://github.com/nahid18/reTCR/issues
+URL: https://github.com/Mangul-Lab-USC/reTCR, https://mangul-lab-usc.github.io/reTCR
+BugReports: https://github.com/Mangul-Lab-USC/reTCR/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
 Suggests: 

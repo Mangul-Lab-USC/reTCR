@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of reTCR is to ...
+TCR Repertoire Analysis in R
 
 ## Installation
 
