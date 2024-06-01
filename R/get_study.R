@@ -1,3 +1,5 @@
+source("R/utils-basic.R")
+
 #' Get pyTCR data of a project
 #'
 #' Retrieve the pyTCR data of a project by its ID.
@@ -10,8 +12,6 @@
 #' \dontrun{
 #' proj <- reTCR::get_study(id = "PRJNA473147")
 #' }
-source("R/utils-basic.R")
-
 get_study <- function(id) {
   stopifnot(is.character(id) && nchar(id) > 0)
   filename <- paste0(id, "_mixcr_metadata_file.csv")
