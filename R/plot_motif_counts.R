@@ -22,7 +22,11 @@ plot_motif_counts <- function(data, threshold = 60) {
 
   ggplot2::ggplot(
     data,
-    ggplot2::aes(x = motif, y = count, color = cmv_status)
+    ggplot2::aes(
+      x = motif,
+      y = count,
+      color = cmv_status
+    )
   ) +
     ggplot2::geom_jitter(width = 0.2, size = 3) +
     ggplot2::labs(x = "Amino acid motif", y = "Count", color = "CMV Status") +
