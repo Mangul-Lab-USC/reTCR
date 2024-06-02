@@ -112,16 +112,18 @@
 <div class="section level3">
 <h3 id="id_12-statistical-analysis">1.2 Statistical Analysis<a class="anchor" aria-label="anchor" href="#id_12-statistical-analysis"></a>
 </h3>
-<p>D’Agostino normality test on clonotype count</p>
+<p>D’Agostino normality test</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://geobosh.github.io/fBasicsDoc/" class="external-link">fBasics</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">fBasics</span><span class="fu">::</span><span class="fu">dagoTest</span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">basic</span><span class="op">@</span><span class="va">summary_data</span><span class="op">$</span><span class="va">clonotype_count</span><span class="op">)</span></span></code></pre></div>
-<p>Shapiro-Wilk normality test on clonotype count</p>
+<span><span class="co"># using clonotype count</span></span>
+<span><span class="fu">dagoTest</span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">basic</span><span class="op">@</span><span class="va">summary_data</span><span class="op">$</span><span class="va">clonotype_count</span><span class="op">)</span></span></code></pre></div>
+<p>Shapiro-Wilk normality test</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">stats</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/shapiro.test.html" class="external-link">shapiro.test</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">basic</span><span class="op">@</span><span class="va">summary_data</span><span class="op">$</span><span class="va">clonotype_count</span><span class="op">)</span></span></code></pre></div>
+<span><span class="co"># using clonotype count</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/shapiro.test.html" class="external-link">shapiro.test</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">basic</span><span class="op">@</span><span class="va">summary_data</span><span class="op">$</span><span class="va">clonotype_count</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
 </div>
