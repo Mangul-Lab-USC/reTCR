@@ -52,17 +52,19 @@ print(proj@basic@spectratype)
 
 ### 1.2 Statistical Analysis
 
-D'Agostino normality test on clonotype count
+D'Agostino normality test
 
 ``` r
 library(fBasics)
 
-fBasics::dagoTest(proj@basic@summary_data$clonotype_count)
+# using clonotype count
+dagoTest(proj@basic@summary_data$clonotype_count)
 ```
-Shapiro-Wilk normality test on clonotype count
+Shapiro-Wilk normality test
 
 ``` r
 library(stats)
 
-stats::shapiro.test(proj@basic@summary_data$clonotype_count)
+# using clonotype count
+shapiro.test(proj@basic@summary_data$clonotype_count)
 ```
