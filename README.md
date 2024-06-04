@@ -3,6 +3,9 @@
 
 TCR Repertoire Analysis in R
 
+> [!WARNING]
+> The package work is in progress.
+
 ## Installation
 
 Install the development version:
