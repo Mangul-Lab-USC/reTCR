@@ -106,6 +106,10 @@ print(proj@clonality@pielou)
 # clonal proportion
 print(proj@clonality@clonal_prop)
 
+# plot clonal proportion per sample
+clonal_prop <- proj@clonality@clonal_prop
+reTCR::plot_clonal_prop_per_sample(clonal_prop, "cmv_status")
+
 # relative abundance (in all clonotypes)
 print(proj@clonality@abundance)
 

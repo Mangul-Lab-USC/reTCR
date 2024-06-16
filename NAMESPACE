@@ -2,6 +2,7 @@
 
 export("%>%")
 export(get_study)
+export(plot_clonal_prop_per_sample)
 export(plot_motif_counts)
 exportClasses(Basic)
 exportClasses(Clonality)
