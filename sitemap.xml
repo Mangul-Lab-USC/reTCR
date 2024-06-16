@@ -46,10 +46,13 @@
     <loc>https://mangul-lab-usc.github.io/reTCR/reference/plot_clonal_prop_per_sample.html</loc>
   </url>
   <url>
+    <loc>https://mangul-lab-usc.github.io/reTCR/reference/plot_clonotype_abundance.html</loc>
+  </url>
+  <url>
     <loc>https://mangul-lab-usc.github.io/reTCR/reference/plot_motif_counts.html</loc>
   </url>
   <url>
-    <loc>https://mangul-lab-usc.github.io/reTCR/reference/plot_relative_abundance.html</loc>
+    <loc>https://mangul-lab-usc.github.io/reTCR/reference/plot_reads_group_abundance.html</loc>
   </url>
   <url>
     <loc>https://mangul-lab-usc.github.io/reTCR/reference/reTCRProj-class.html</loc>
