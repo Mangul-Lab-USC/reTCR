@@ -91,7 +91,7 @@ print(proj@diversity@chao1)
 print(proj@diversity@gini_coeff)
 ```
 
-### 2.2 Visualization with diversity metrics
+### 2.2 Diversity Visualization
 
 ```r
 reTCR::plot_diversity_index(proj@diversity@shannon, "shannon_index", "cmv_status")
@@ -134,7 +134,7 @@ print(proj@clonality@abundance_top)
 print(proj@clonality@abundance_rare)
 ```
 
-## 3.2 Visualization with clonality metrics
+## 3.2 Clonality Visualization
 
 ```r
 # let's store clonal proportion in `clonal_data`
