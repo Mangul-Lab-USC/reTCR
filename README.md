@@ -19,7 +19,7 @@ devtools::install_github("Mangul-Lab-USC/reTCR")
 ``` r
 library(reTCR)
 
-proj <- reTCR::get_study(id="PRJNA473147", attribute_col="cmv_status")
+proj <- reTCR::get_study(id="PRJNA473147", attr_col="cmv_status")
 
 # view data
 print(proj@data)
