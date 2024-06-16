@@ -90,3 +90,28 @@ print(proj@diversity@chao1)
 # Gini coefficient
 print(proj@diversity@gini_coeff)
 ```
+
+## 3. Clonality Analysis
+
+``` r
+# most frequent clonotypes
+print(proj@clonality@most_clonotype)
+
+# least frequent clonotypes
+print(proj@clonality@least_clonotype)
+
+# 1-Pielou index
+print(proj@clonality@pielou)
+
+# clonal proportion
+print(proj@clonality@clonal_prop)
+
+# relative abundance (in all clonotypes)
+print(proj@clonality@abundance)
+
+# relative abundance (in top 100 clonotypes)
+print(proj@clonality@abundance_top)
+
+# relative abundance (in rare clonotypes)
+print(proj@clonality@abundance_rare)
+```

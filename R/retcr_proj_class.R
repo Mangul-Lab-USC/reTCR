@@ -1,6 +1,6 @@
 #' Class "Basic"
 #'
-#' A class to represent basic analysis data.
+#' A class to represent basic metrics
 #'
 #' @slot summary_data summary data
 #' @slot reads_count read counts
@@ -24,25 +24,9 @@ setClass("Basic",
   )
 )
 
-#' Class "Motif"
-#'
-#' A class to represent motif data.
-#'
-#' @slot aa_spectratype aa spectratype data.
-#' @slot aa_max_spectratype aa max spectratype data.
-#' @slot aa_motif_count aa motif count data.
-#' @exportClass Motif
-setClass("Motif",
-  slots = c(
-    aa_spectratype = "data.frame",
-    aa_max_spectratype = "data.frame",
-    aa_motif_count = "data.frame"
-  )
-)
-
 #' Class "Diversity"
 #'
-#' A class to represent diversity data.
+#' A class to represent diversity metrics
 #'
 #' @slot shannon Shannon-Wiener indexes
 #' @slot simpson Simpson indexes
@@ -60,18 +44,60 @@ setClass("Diversity",
   )
 )
 
+#' Class "Clonality"
+#'
+#' A class to represent clonality metrics
+#'
+#' @slot most_clonotype most frequent clonotype
+#' @slot least_clonotype least frequent clonotype
+#' @slot pielou 1-Pielou index
+#' @slot clonal_prop clonal proportion
+#' @slot abundance relative abundance (in all clonotypes)
+#' @slot abundance_top relative abundance (in top 100 clonotypes)
+#' @slot abundance_rare relative abundance (in rare clonotypes)
+#' @exportClass Clonality
+setClass("Clonality",
+  slots = c(
+    most_clonotype = "data.frame",
+    least_clonotype = "data.frame",
+    pielou = "data.frame",
+    clonal_prop = "data.frame",
+    abundance = "data.frame",
+    abundance_top = "data.frame",
+    abundance_rare = "data.frame"
+  )
+)
+
+#' Class "Motif"
+#'
+#' A class to represent motif data
+#'
+#' @slot aa_spectratype aa spectratype data
+#' @slot aa_max_spectratype aa max spectratype data
+#' @slot aa_motif_count aa motif count data
+#' @exportClass Motif
+setClass("Motif",
+  slots = c(
+    aa_spectratype = "data.frame",
+    aa_max_spectratype = "data.frame",
+    aa_motif_count = "data.frame"
+  )
+)
+
 #' Class "reTCRProj"
 #'
 #' A class to represent a reTCR project
 #'
-#' @slot data contains the main data for the project.
-#' @slot basic contains basic analysis information.
-#' @slot diversity contains diversity analysis information.
+#' @slot data contains the main data for the project
+#' @slot basic contains basic metrics
+#' @slot diversity contains diversity metrics
+#' @slot clonality contains clonality metrics
 #' @exportClass reTCRProj
 setClass("reTCRProj",
   slots = c(
     data = "data.frame",
     basic = "Basic",
-    diversity = "Diversity"
+    diversity = "Diversity",
+    clonality = "Clonality"
   )
 )

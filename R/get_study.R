@@ -1,5 +1,6 @@
 source("R/utils-basic.R")
 source("R/utils-diversity.R")
+source("R/utils-clonality.R")
 
 #' Get pyTCR data of a project
 #'
@@ -23,11 +24,13 @@ get_study <- function(id, attr_col) {
 
   basic <- .get_basic(data = data, attr_col = attr_col)
   diversity <- .get_diversity(data = data, attr_col = attr_col)
+  clonality <- .get_clonality(data = data, attr_col = attr_col)
 
   return(methods::new(
     "reTCRProj",
     data = data,
     basic = basic,
-    diversity = diversity
+    diversity = diversity,
+    clonality = clonality
   ))
 }

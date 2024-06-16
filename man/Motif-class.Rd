@@ -5,15 +5,15 @@
 \alias{Motif-class}
 \title{Class "Motif"}
 \description{
-A class to represent motif data.
+A class to represent motif data
 }
 \section{Slots}{
 
 \describe{
-\item{\code{aa_spectratype}}{aa spectratype data.}
+\item{\code{aa_spectratype}}{aa spectratype data}
 
-\item{\code{aa_max_spectratype}}{aa max spectratype data.}
+\item{\code{aa_max_spectratype}}{aa max spectratype data}
 
-\item{\code{aa_motif_count}}{aa motif count data.}
+\item{\code{aa_motif_count}}{aa motif count data}
 }}
 
