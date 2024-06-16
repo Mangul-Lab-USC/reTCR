@@ -133,10 +133,7 @@
 <h2 id="id_2-diversity-analysis">2. Diversity Analysis<a class="anchor" aria-label="anchor" href="#id_2-diversity-analysis"></a>
 </h2>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># summary data</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">diversity</span><span class="op">@</span><span class="va">summary_data</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># shannon index values</span></span>
+<code class="sourceCode R"><span><span class="co"># shannon index values</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">diversity</span><span class="op">@</span><span class="va">shannon</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># simpson index values</span></span>
@@ -144,6 +141,9 @@
 <span></span>
 <span><span class="co"># D50 index</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">diversity</span><span class="op">@</span><span class="va">d50</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Chao1 estimate and standard deviation </span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">diversity</span><span class="op">@</span><span class="va">chao1</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Gini coefficient</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">diversity</span><span class="op">@</span><span class="va">gini_coeff</span><span class="op">)</span></span></code></pre></div>
