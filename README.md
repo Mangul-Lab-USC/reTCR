@@ -1,4 +1,3 @@
-
 # reTCR
 
 TCR Repertoire Analysis in R
@@ -10,13 +9,13 @@ TCR Repertoire Analysis in R
 
 Install the development version:
 
-``` r
+```r
 devtools::install_github("Mangul-Lab-USC/reTCR")
 ```
 
 ## Example
 
-``` r
+```r
 library(reTCR)
 
 proj <- reTCR::get_study(id="PRJNA473147", attr_col="cmv_status")
@@ -25,9 +24,9 @@ proj <- reTCR::get_study(id="PRJNA473147", attr_col="cmv_status")
 print(proj@data)
 ```
 
-## 1. Basic Analysis
+## 1. Basic Metrics
 
-``` r
+```r
 # summary data
 print(proj@basic@summary_data)
 
@@ -53,28 +52,29 @@ print(proj@basic@convergence)
 print(proj@basic@spectratype)
 ```
 
-### 1.1 Statistical Analysis
+### 1.2 Statistical Analysis
 
 D'Agostino normality test
 
-``` r
+```r
 library(fBasics)
 
 # using clonotype count
 dagoTest(proj@basic@summary_data$clonotype_count)
 ```
+
 Shapiro-Wilk normality test
 
-``` r
+```r
 library(stats)
 
 # using clonotype count
 shapiro.test(proj@basic@summary_data$clonotype_count)
 ```
 
-## 2. Diversity Analysis
+## 2. Diversity Metrics
 
-``` r
+```r
 # shannon index values
 print(proj@diversity@shannon)
 
@@ -84,16 +84,34 @@ print(proj@diversity@simpson)
 # D50 index
 print(proj@diversity@d50)
 
-# Chao1 estimate and standard deviation 
+# Chao1 estimate and standard deviation
 print(proj@diversity@chao1)
 
 # Gini coefficient
 print(proj@diversity@gini_coeff)
 ```
 
-## 3. Clonality Analysis
+### 2.2 Visualization with diversity metrics
 
-``` r
+```r
+reTCR::plot_diversity_index(proj@diversity@shannon, "shannon_index", "cmv_status")
+
+reTCR::plot_diversity_index(proj@diversity@shannon, "shannon_wiener_index", "cmv_status")
+
+reTCR::plot_diversity_index(proj@diversity@simpson, "simpson_index", "cmv_status")
+
+reTCR::plot_diversity_index(proj@diversity@simpson, "inverse_simpson_index", "cmv_status")
+
+reTCR::plot_diversity_index(proj@diversity@d50, "d50_index", "cmv_status")
+
+reTCR::plot_diversity_index(proj@diversity@chao1, "chao1", "cmv_status")
+
+reTCR::plot_diversity_index(proj@diversity@gini_coeff, "gini_coeff", "cmv_status")
+```
+
+## 3. Clonality Metrics
+
+```r
 # most frequent clonotypes
 print(proj@clonality@most_clonotype)
 
@@ -116,9 +134,9 @@ print(proj@clonality@abundance_top)
 print(proj@clonality@abundance_rare)
 ```
 
-## 3.1 Visualization with clonality metrics
+## 3.2 Visualization with clonality metrics
 
-``` r
+```r
 # let's store clonal proportion in `clonal_data`
 clonal_data <- proj@clonality@clonal_prop
 
