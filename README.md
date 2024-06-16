@@ -83,4 +83,7 @@ print(proj@diversity@shannon)
 
 # simpson index values
 print(proj@diversity@simpson)
+
+# D50 index
+print(proj@diversity@d50)
 ```
