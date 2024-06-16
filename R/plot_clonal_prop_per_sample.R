@@ -1,11 +1,11 @@
-#' Plot Clonal Proportion per Sample
+#' Plot clonal proportion per sample
 #'
 #' This function plots the clonal proportion per sample.
 #'
-#' @param data A data frame containing the clonal proportion per sample.
+#' @param data A data frame of clonal proportion per sample.
 #' @param attr_col Character. Attribute column name.
 #'
-#' @return A ggplot2 object representing the clonal proportion per sample plot.
+#' @return A ggplot2 plot of clonal proportion per sample plot.
 #' @export
 #'
 #' @examples

@@ -2,17 +2,17 @@
 % Please edit documentation in R/plot_clonal_prop_per_sample.R
 \name{plot_clonal_prop_per_sample}
 \alias{plot_clonal_prop_per_sample}
-\title{Plot Clonal Proportion per Sample}
+\title{Plot clonal proportion per sample}
 \usage{
 plot_clonal_prop_per_sample(data, attr_col)
 }
 \arguments{
-\item{data}{A data frame containing the clonal proportion per sample.}
+\item{data}{A data frame of clonal proportion per sample.}
 
 \item{attr_col}{Character. Attribute column name.}
 }
 \value{
-A ggplot2 object representing the clonal proportion per sample plot.
+A ggplot2 plot of clonal proportion per sample plot.
 }
 \description{
 This function plots the clonal proportion per sample.
