@@ -10,11 +10,12 @@
 #'
 #' @examples
 #' \dontrun{
-#' proj <- reTCR::get_study(id = "PRJNA473147", attr_col = "cmv_status")
-#' reTCR::plot_relative_abundance(proj@clonality@abundance)
+#' proj <- reTCR::get_study(id="PRJNA473147", attr_col="cmv_status")
+#' reTCR::plot_clonotype_abundance(proj@clonality@abundance)
 #' }
-plot_relative_abundance <- function(data) {
-  label_order <- c("Hyperexpanded", "Large", "Medium", "Small", "Rare")
+plot_clonotype_abundance <- function(data) {
+  label_order <- unique(data$clonotype_group)
+  colors <- c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3", "#FF7F00")
 
   ggplot2::ggplot(
     data,
@@ -26,7 +27,7 @@ plot_relative_abundance <- function(data) {
       color = NA
     ) +
     ggplot2::scale_fill_manual(
-      values = c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3", "#FF7F00"),
+      values = colors,
       breaks = label_order
     ) +
     ggplot2::labs(x = "sample", y = "clonotype frequency") +

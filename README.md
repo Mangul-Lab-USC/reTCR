@@ -119,10 +119,13 @@ reTCR::plot_clonal_prop_per_group(clonal_data, "cmv_status")
 print(proj@clonality@abundance)
 
 # plot relative abundance in all clonotypes
-reTCR::plot_relative_abundance(proj@clonality@abundance)
+reTCR::plot_clonotype_abundance(proj@clonality@abundance)
 
 # relative abundance (in top 100 clonotypes)
 print(proj@clonality@abundance_top)
+
+# plot reads group abbundance in top 100 clonotypes
+reTCR::plot_reads_group_abundance(proj@clonality@abundance_top)
 
 # relative abundance (in rare clonotypes)
 print(proj@clonality@abundance_rare)
