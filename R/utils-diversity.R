@@ -17,10 +17,24 @@
       gini_simpson_index = 1 - sum(freq^2),
     )
 
+  gini <- function(list_of_values) {
+    sorted_list <- sort(list_of_values)
+    height <- 0
+    area <- 0
+    for (value in sorted_list) {
+      height <- height + value
+      area <- area + height - value / 2
+    }
+    fair_area <- height * length(list_of_values) / 2
+    return((fair_area - area) / fair_area)
+  }
+
   df_d50 <- data.frame()
+  df_gini <- data.frame()
   samples <- unique(div_data$sample)
+
   for (sample in samples) {
-    df_temp <- div_data %>%
+    d50_temp <- div_data %>%
       dplyr::filter(sample == !!sample) %>%
       dplyr::arrange(dplyr::desc(freq)) %>%
       dplyr::mutate(clonotype_number = dplyr::row_number()) %>%
@@ -28,7 +42,12 @@
       dplyr::filter(accum_freq >= 0.5 & accum_freq <= 0.6) %>%
       dplyr::slice(1) %>%
       dplyr::mutate(d50_index = clonotype_number / clonotype_count * 100)
-    df_d50 <- dplyr::bind_rows(df_d50, df_temp)
+
+    gini_temp <- div_data %>% dplyr::filter(sample == !!sample)
+    gini_coeff <- gini(gini_temp$freq)
+    gini_temp <- gini_temp %>% dplyr::mutate(gini_coeff = gini_coeff)
+    df_d50 <- dplyr::bind_rows(df_d50, d50_temp)
+    df_gini <- dplyr::bind_rows(df_gini, gini_temp)
   }
 
   return(methods::new(
@@ -54,6 +73,8 @@
       dplyr::select(sample, !!rlang::sym(attr_col), d50_index) %>%
       dplyr::arrange(dplyr::desc(d50_index)),
     chao1 = diversity,
-    gini_coeff = diversity
+    gini_coeff = df_gini %>%
+      dplyr::select(sample, !!rlang::sym(attr_col), gini_coeff) %>%
+      dplyr::distinct(sample, .keep_all = TRUE)
   ))
 }

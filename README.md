@@ -86,4 +86,7 @@ print(proj@diversity@simpson)
 
 # D50 index
 print(proj@diversity@d50)
+
+# Gini coefficient
+print(proj@diversity@gini_coeff)
 ```
