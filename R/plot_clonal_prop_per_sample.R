@@ -5,7 +5,7 @@
 #' @param data A data frame of clonal proportion per sample.
 #' @param attr_col Character. Attribute column name.
 #'
-#' @return A ggplot2 plot of clonal proportion per sample plot.
+#' @return A ggplot2 plot of clonal proportion per sample.
 #' @export
 #'
 #' @examples

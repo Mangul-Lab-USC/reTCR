@@ -104,17 +104,17 @@ print(proj@clonality@least_clonotype)
 print(proj@clonality@pielou)
 
 # clonal proportion
-clonal_prop <- proj@clonality@clonal_prop
-print(clonal_prop)
-
+clonal_data <- proj@clonality@clonal_prop
+print(clonal_data)
 # plot clonal proportion per sample
-reTCR::plot_clonal_prop_per_sample(clonal_prop, "cmv_status")
-
+reTCR::plot_clonal_prop_per_sample(clonal_data, "cmv_status")
 # plot clonal proportion per group
-reTCR::plot_clonal_prop_per_group(clonal_prop, "cmv_status")
+reTCR::plot_clonal_prop_per_group(clonal_data, "cmv_status")
 
 # relative abundance (in all clonotypes)
 print(proj@clonality@abundance)
+# plot relative abundance in all clonotypes
+reTCR::plot_relative_abundance(proj@clonality@abundance)
 
 # relative abundance (in top 100 clonotypes)
 print(proj@clonality@abundance_top)

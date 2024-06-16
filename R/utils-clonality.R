@@ -27,6 +27,36 @@
     df_clonality_portion <- dplyr::bind_rows(df_clonality_portion, df_temp)
   }
 
+  abundance_df <- data %>%
+    dplyr::mutate(clonotype_group = dplyr::case_when(
+      freq > 0.01 & freq <= 1 ~ "Hyperexpanded",
+      freq > 0.001 & freq <= 0.01 ~ "Large",
+      freq > 0.0001 & freq <= 0.001 ~ "Medium",
+      freq > 0.00001 & freq <= 0.0001 ~ "Small",
+      freq > 0 & freq <= 0.00001 ~ "Rare"
+    ))
+
+  .reads_group_top <- function(count) {
+    if (count > 1 && count <= 10) {
+      return("1-10")
+    } else if (count >= 11 && count <= 100) {
+      return("11-100")
+    } else if (count >= 101 && count <= 1000) {
+      return("101-1000")
+    } else if (count >= 1001 && count <= 5000) {
+      return("1001-5000")
+    } else {
+      return("None")
+    }
+  }
+
+  abundance_top <- data %>%
+    dplyr::arrange(sample, dplyr::desc(freq)) %>%
+    dplyr::group_by(sample) %>%
+    dplyr::slice_head(n = 100) %>%
+    dplyr::mutate(reads_group = purrr::map_chr(count, .reads_group_top)) %>%
+    dplyr::select(sample, !!rlang::sym(attr_col), reads_group)
+
   return(
     methods::new(
       "Clonality",
@@ -44,8 +74,11 @@
       clonal_prop = df_clonality_portion %>%
         dplyr::select(sample, !!rlang::sym(attr_col), clonotype_number) %>%
         dplyr::rename(clonality_portion = clonotype_number),
-      abundance = data.frame(),
-      abundance_top = data.frame(),
+      abundance = abundance_df %>%
+        dplyr::group_by(sample, !!rlang::sym(attr_col), clonotype_group) %>%
+        dplyr::summarize(relative_abundance = sum(freq)) %>%
+        dplyr::ungroup(),
+      abundance_top = abundance_top,
       abundance_rare = data.frame()
     )
   )

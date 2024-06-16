@@ -12,7 +12,7 @@ plot_clonal_prop_per_sample(data, attr_col)
 \item{attr_col}{Character. Attribute column name.}
 }
 \value{
-A ggplot2 plot of clonal proportion per sample plot.
+A ggplot2 plot of clonal proportion per sample.
 }
 \description{
 This function plots the clonal proportion per sample.

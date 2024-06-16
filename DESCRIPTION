@@ -25,6 +25,8 @@ Imports:
     rlang,
     ggplot2,
     dplyr,
+    purrr,
+    stringr,
     methods,
     utils,
     magrittr
