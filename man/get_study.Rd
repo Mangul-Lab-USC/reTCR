@@ -4,12 +4,12 @@
 \alias{get_study}
 \title{Get pyTCR data of a project}
 \usage{
-get_study(id, attribute_col)
+get_study(id, attr_col)
 }
 \arguments{
 \item{id}{Character. Project ID.}
 
-\item{attribute_col}{Character. Attribute column name.}
+\item{attr_col}{Character. Attribute column name.}
 }
 \value{
 An object of class \code{reTCRProj}.
@@ -19,6 +19,6 @@ Retrieve the pyTCR data of a project by its ID.
 }
 \examples{
 \dontrun{
-proj <- reTCR::get_study(id="PRJNA473147", attribute_col="cmv_status")
+proj <- reTCR::get_study(id="PRJNA473147", attr_col="cmv_status")
 }
 }

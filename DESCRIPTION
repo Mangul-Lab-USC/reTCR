@@ -22,6 +22,7 @@ Config/testthat/edition: 3
 VignetteBuilder: knitr
 Imports:
     stats,
+    rlang,
     ggplot2,
     dplyr,
     methods,

@@ -10,8 +10,16 @@ A class to represent diversity data.
 \section{Slots}{
 
 \describe{
-\item{\code{shannon_index}}{A numeric value representing the Shannon index.}
+\item{\code{summary_data}}{summary data}
 
-\item{\code{gini_index}}{A numeric value representing the Gini index.}
+\item{\code{shannon}}{Shannon-Wiener indexes}
+
+\item{\code{simpson}}{Simpson indexes}
+
+\item{\code{d50}}{D50 index}
+
+\item{\code{chao1}}{Chao1 estimate}
+
+\item{\code{gini_coeff}}{Gini coefficient}
 }}
 

@@ -71,3 +71,16 @@ library(stats)
 # using clonotype count
 shapiro.test(proj@basic@summary_data$clonotype_count)
 ```
+
+## 2. Diversity Analysis
+
+``` r
+# summary data
+print(proj@diversity@summary_data)
+
+# shannon index values
+print(proj@diversity@shannon)
+
+# simpson index values
+print(proj@diversity@simpson)
+```

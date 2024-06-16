@@ -44,13 +44,21 @@ setClass("Motif",
 #'
 #' A class to represent diversity data.
 #'
-#' @slot shannon_index A numeric value representing the Shannon index.
-#' @slot gini_index A numeric value representing the Gini index.
+#' @slot summary_data summary data
+#' @slot shannon Shannon-Wiener indexes
+#' @slot simpson Simpson indexes
+#' @slot d50 D50 index
+#' @slot chao1 Chao1 estimate
+#' @slot gini_coeff Gini coefficient
 #' @exportClass Diversity
 setClass("Diversity",
   slots = c(
-    shannon_index = "numeric",
-    gini_index = "numeric"
+    summary_data = "data.frame",
+    shannon = "data.frame",
+    simpson = "data.frame",
+    d50 = "data.frame",
+    chao1 = "data.frame",
+    gini_coeff = "data.frame"
   )
 )
 
@@ -60,10 +68,12 @@ setClass("Diversity",
 #'
 #' @slot data contains the main data for the project.
 #' @slot basic contains basic analysis information.
+#' @slot diversity contains diversity analysis information.
 #' @exportClass reTCRProj
 setClass("reTCRProj",
   slots = c(
     data = "data.frame",
-    basic = "Basic"
+    basic = "Basic",
+    diversity = "Diversity"
   )
 )
