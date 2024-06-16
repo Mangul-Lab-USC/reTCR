@@ -162,15 +162,20 @@
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">clonality</span><span class="op">@</span><span class="va">pielou</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># clonal proportion</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">clonality</span><span class="op">@</span><span class="va">clonal_prop</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># let's store clonal proportion in `clonal_data`</span></span>
 <span><span class="va">clonal_data</span> <span class="op">&lt;-</span> <span class="va">proj</span><span class="op">@</span><span class="va">clonality</span><span class="op">@</span><span class="va">clonal_prop</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">clonal_data</span><span class="op">)</span></span>
+<span></span>
 <span><span class="co"># plot clonal proportion per sample</span></span>
 <span><span class="fu">reTCR</span><span class="fu">::</span><span class="fu"><a href="reference/plot_clonal_prop_per_sample.html">plot_clonal_prop_per_sample</a></span><span class="op">(</span><span class="va">clonal_data</span>, <span class="st">"cmv_status"</span><span class="op">)</span></span>
+<span></span>
 <span><span class="co"># plot clonal proportion per group</span></span>
 <span><span class="fu">reTCR</span><span class="fu">::</span><span class="fu"><a href="reference/plot_clonal_prop_per_group.html">plot_clonal_prop_per_group</a></span><span class="op">(</span><span class="va">clonal_data</span>, <span class="st">"cmv_status"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># relative abundance (in all clonotypes)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">clonality</span><span class="op">@</span><span class="va">abundance</span><span class="op">)</span></span>
+<span></span>
 <span><span class="co"># plot relative abundance in all clonotypes</span></span>
 <span><span class="fu">reTCR</span><span class="fu">::</span><span class="fu"><a href="reference/plot_relative_abundance.html">plot_relative_abundance</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">clonality</span><span class="op">@</span><span class="va">abundance</span><span class="op">)</span></span>
 <span></span>
