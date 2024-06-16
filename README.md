@@ -53,7 +53,7 @@ print(proj@basic@convergence)
 print(proj@basic@spectratype)
 ```
 
-### 1.2 Statistical Analysis
+### 1.1 Statistical Analysis
 
 D'Agostino normality test
 
@@ -106,6 +106,19 @@ print(proj@clonality@pielou)
 # clonal proportion
 print(proj@clonality@clonal_prop)
 
+# relative abundance (in all clonotypes)
+print(proj@clonality@abundance)
+
+# relative abundance (in top 100 clonotypes)
+print(proj@clonality@abundance_top)
+
+# relative abundance (in rare 100 clonotypes)
+print(proj@clonality@abundance_rare)
+```
+
+## 3.1 Visualization with clonality metrics
+
+``` r
 # let's store clonal proportion in `clonal_data`
 clonal_data <- proj@clonality@clonal_prop
 
@@ -115,21 +128,12 @@ reTCR::plot_clonal_prop_per_sample(clonal_data, "cmv_status")
 # plot clonal proportion per group
 reTCR::plot_clonal_prop_per_group(clonal_data, "cmv_status")
 
-# relative abundance (in all clonotypes)
-print(proj@clonality@abundance)
-
 # plot relative abundance in all clonotypes
 reTCR::plot_clonotype_abundance(proj@clonality@abundance)
-
-# relative abundance (in top 100 clonotypes)
-print(proj@clonality@abundance_top)
 
 # plot reads group abbundance in top 100 clonotypes
 reTCR::plot_reads_group_abundance(proj@clonality@abundance_top)
 
-# relative abundance (in rare 100 clonotypes)
-print(proj@clonality@abundance_rare)
-
 # plot reads group abbundance in rare 100 clonotypes
-reTCR::plot_reads_group_abundance(proj@clonality@abundance_top)
+reTCR::plot_reads_group_abundance(proj@clonality@abundance_rare)
 ```
