@@ -50,11 +50,36 @@
     }
   }
 
-  abundance_top <- data %>%
+  .reads_group_rare <- function(count) {
+    if (count == 1) {
+      return("1")
+    } else if (count >= 2 && count <= 3) {
+      return("2-3")
+    } else if (count >= 4 && count <= 10) {
+      return("4-10")
+    } else if (count >= 11 && count <= 30) {
+      return("11-30")
+    } else if (count >= 31 && count <= 100) {
+      return("31-100")
+    } else if (count >= 101 && count <= 200) {
+      return("101-200")
+    } else {
+      return("None")
+    }
+  }
+
+  df_top <- data %>%
     dplyr::arrange(sample, dplyr::desc(freq)) %>%
     dplyr::group_by(sample) %>%
     dplyr::slice_head(n = 100) %>%
     dplyr::mutate(reads_group = purrr::map_chr(count, .reads_group_top)) %>%
+    dplyr::select(sample, !!rlang::sym(attr_col), reads_group)
+
+  df_rare <- data %>%
+    dplyr::arrange(sample, freq) %>%
+    dplyr::group_by(sample) %>%
+    dplyr::slice_head(n = 100) %>%
+    dplyr::mutate(reads_group = purrr::map_chr(count, .reads_group_rare)) %>%
     dplyr::select(sample, !!rlang::sym(attr_col), reads_group)
 
   return(
@@ -78,8 +103,8 @@
         dplyr::group_by(sample, !!rlang::sym(attr_col), clonotype_group) %>%
         dplyr::summarize(relative_abundance = sum(freq)) %>%
         dplyr::ungroup(),
-      abundance_top = abundance_top,
-      abundance_rare = data.frame()
+      abundance_top = df_top,
+      abundance_rare = df_rare
     )
   )
 }

@@ -127,6 +127,9 @@ print(proj@clonality@abundance_top)
 # plot reads group abbundance in top 100 clonotypes
 reTCR::plot_reads_group_abundance(proj@clonality@abundance_top)
 
-# relative abundance (in rare clonotypes)
+# relative abundance (in rare 100 clonotypes)
 print(proj@clonality@abundance_rare)
+
+# plot reads group abbundance in rare 100 clonotypes
+reTCR::plot_reads_group_abundance(proj@clonality@abundance_top)
 ```

@@ -15,7 +15,7 @@
 #' }
 plot_reads_group_abundance <- function(data) {
   label_order <- unique(data$reads_group)
-  colors <- c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3", "#FF7F00")
+  colors <- RColorBrewer::brewer.pal(n = length(label_order), name = "Set1")
 
   df_counts <- data %>%
     dplyr::filter(reads_group != "None") %>%

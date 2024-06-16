@@ -29,4 +29,5 @@ Imports:
     stringr,
     methods,
     utils,
+    RColorBrewer,
     magrittr
