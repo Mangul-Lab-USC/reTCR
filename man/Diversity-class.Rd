@@ -10,8 +10,6 @@ A class to represent diversity data.
 \section{Slots}{
 
 \describe{
-\item{\code{summary_data}}{summary data}
-
 \item{\code{shannon}}{Shannon-Wiener indexes}
 
 \item{\code{simpson}}{Simpson indexes}

@@ -75,9 +75,6 @@ shapiro.test(proj@basic@summary_data$clonotype_count)
 ## 2. Diversity Analysis
 
 ``` r
-# summary data
-print(proj@diversity@summary_data)
-
 # shannon index values
 print(proj@diversity@shannon)
 
@@ -86,6 +83,9 @@ print(proj@diversity@simpson)
 
 # D50 index
 print(proj@diversity@d50)
+
+# Chao1 estimate and standard deviation 
+print(proj@diversity@chao1)
 
 # Gini coefficient
 print(proj@diversity@gini_coeff)

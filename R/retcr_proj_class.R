@@ -44,7 +44,6 @@ setClass("Motif",
 #'
 #' A class to represent diversity data.
 #'
-#' @slot summary_data summary data
 #' @slot shannon Shannon-Wiener indexes
 #' @slot simpson Simpson indexes
 #' @slot d50 D50 index
@@ -53,7 +52,6 @@ setClass("Motif",
 #' @exportClass Diversity
 setClass("Diversity",
   slots = c(
-    summary_data = "data.frame",
     shannon = "data.frame",
     simpson = "data.frame",
     d50 = "data.frame",
