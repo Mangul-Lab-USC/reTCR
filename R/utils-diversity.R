@@ -1,12 +1,12 @@
 .get_diversity <- function(data, attr_col) {
-  div_data <- data %>%
+  df_div <- data %>%
     dplyr::group_by(sample, !!rlang::sym(attr_col)) %>%
     dplyr::summarise(
       clonotype_count = dplyr::n()
     ) %>%
     dplyr::left_join(data, by = c("sample", attr_col))
 
-  diversity <- div_data %>%
+  diversity <- df_div %>%
     dplyr::group_by(sample, !!rlang::sym(attr_col)) %>%
     dplyr::summarise(
       shannon_index = sum(-freq * log(freq)),
@@ -29,13 +29,13 @@
     return((fair_area - area) / fair_area)
   }
 
-  samples <- unique(div_data$sample)
+  samples <- unique(df_div$sample)
   df_d50 <- data.frame()
   df_gini <- data.frame()
   df_chao1 <- data.frame()
 
   for (sample in samples) {
-    filt_df <- div_data %>% dplyr::filter(sample == !!sample)
+    filt_df <- df_div %>% dplyr::filter(sample == !!sample)
 
     gini_temp <- filt_df %>% dplyr::mutate(gini_coeff = gini(filt_df$freq))
     df_gini <- dplyr::bind_rows(df_gini, gini_temp)

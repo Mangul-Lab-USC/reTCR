@@ -19,6 +19,6 @@ Retrieve the pyTCR data of a project by its ID.
 }
 \examples{
 \dontrun{
-proj <- reTCR::get_study(id="PRJNA473147", attr_col="cmv_status")
+proj <- reTCR::get_study(id = "PRJNA473147", attr_col = "cmv_status")
 }
 }

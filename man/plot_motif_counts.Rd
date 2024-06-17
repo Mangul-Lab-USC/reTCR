@@ -19,7 +19,7 @@ This function plots the motif counts.
 }
 \examples{
 \dontrun{
-proj <- reTCR::get_study(id = "PRJNA473147")
+proj <- reTCR::get_study(id="PRJNA473147", attr_col="cmv_status")
 reTCR::plot_motif_counts(proj@motif@aa_motif_count, 20)
 }
 }

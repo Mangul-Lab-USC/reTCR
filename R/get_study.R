@@ -1,5 +1,7 @@
-source("R/utils-basic.R")
 source("R/utils-diversity.R")
+source("R/utils-clonality.R")
+source("R/utils-basic.R")
+source("R/utils-hill.R")
 
 #' Get pyTCR data of a project
 #'
@@ -12,9 +14,8 @@ source("R/utils-diversity.R")
 #'
 #' @examples
 #' \dontrun{
-#' proj <- reTCR::get_study(id="PRJNA473147", attr_col="cmv_status")
+#' proj <- reTCR::get_study(id = "PRJNA473147", attr_col = "cmv_status")
 #' }
-
 get_study <- function(id, attr_col) {
   stopifnot(is.character(id) && nchar(id) > 0)
   filename <- paste0(id, "_mixcr_metadata_file.csv")
@@ -23,11 +24,15 @@ get_study <- function(id, attr_col) {
 
   basic <- .get_basic(data = data, attr_col = attr_col)
   diversity <- .get_diversity(data = data, attr_col = attr_col)
+  clonality <- .get_clonality(data = data, attr_col = attr_col)
+  hill <- .get_hill_numbers(df = data)
 
   return(methods::new(
     "reTCRProj",
     data = data,
     basic = basic,
-    diversity = diversity
+    diversity = diversity,
+    clonality = clonality,
+    hill = hill
   ))
 }

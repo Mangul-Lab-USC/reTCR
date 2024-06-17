@@ -5,7 +5,7 @@
 \alias{Basic-class}
 \title{Class "Basic"}
 \description{
-A class to represent basic analysis data.
+A class to represent basic metrics
 }
 \section{Slots}{
 

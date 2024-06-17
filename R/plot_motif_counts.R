@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' proj <- reTCR::get_study(id = "PRJNA473147")
+#' proj <- reTCR::get_study(id="PRJNA473147", attr_col="cmv_status")
 #' reTCR::plot_motif_counts(proj@motif@aa_motif_count, 20)
 #' }
 plot_motif_counts <- function(data, threshold = 60) {
@@ -29,7 +29,11 @@ plot_motif_counts <- function(data, threshold = 60) {
     )
   ) +
     ggplot2::geom_jitter(width = 0.2, size = 3) +
-    ggplot2::labs(x = "Amino acid motif", y = "Count", color = "CMV Status") +
+    ggplot2::labs(
+      x = "Amino acid motif",
+      y = "Count",
+      color = "CMV Status"
+    ) +
     ggplot2::theme_bw() +
     ggplot2::theme(
       axis.text.x = ggplot2::element_text(

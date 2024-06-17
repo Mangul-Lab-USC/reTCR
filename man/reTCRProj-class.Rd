@@ -10,10 +10,14 @@ A class to represent a reTCR project
 \section{Slots}{
 
 \describe{
-\item{\code{data}}{contains the main data for the project.}
+\item{\code{data}}{contains the main data for the project}
 
-\item{\code{basic}}{contains basic analysis information.}
+\item{\code{basic}}{contains basic metrics}
 
-\item{\code{diversity}}{contains diversity analysis information.}
+\item{\code{diversity}}{contains diversity metrics}
+
+\item{\code{clonality}}{contains clonality metrics}
+
+\item{\code{hill}}{contains Hill numbers}
 }}
 

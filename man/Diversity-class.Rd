@@ -5,7 +5,7 @@
 \alias{Diversity-class}
 \title{Class "Diversity"}
 \description{
-A class to represent diversity data.
+A class to represent diversity metrics
 }
 \section{Slots}{
 
