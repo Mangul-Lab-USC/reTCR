@@ -1,7 +1,7 @@
 # TCR Repertoire Analysis in R
 
 
-<img width="346" alt="reTCR_logo" src="https://github.com/EllaSchwab/reTCR/assets/118077332/2e96e990-14ad-4f52-97ff-1b0af108dc57">
+<img width="405" alt="reTCR_logo" src="https://github.com/Mangul-Lab-USC/reTCR/assets/118077332/a7a21580-d8d1-49bc-ae2a-b65af1da7f37">
 
 This package provides a streamlined resource for uniformly processed publicly available TCR-seq data from SRA with attention to known library preparation method and normalization by read number. The goal of reTCR is to provide users with a wealth of easy to access, end-to-end, uniformly processed data for exploratory analysis. 
 
