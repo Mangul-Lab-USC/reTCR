@@ -5,7 +5,7 @@
 
 This package provides a streamlined resource for uniformly processed publicly available TCR-seq data from SRA with attention to known library preparation method and normalization by read number. The goal of reTCR is to provide users with a wealth of easy to access, end-to-end, uniformly processed data for exploratory analysis. 
 
-The raw sequencing data were processed with MiXCR using a specifc library preset for each study and further downsampled by read number allowing for comparison between samples. Normalization is crucial for separating biological signal from technical noise. Next, output from MiXCR is reformatted input into [pyTCR](https://github.com/Mangul-Lab-USC/pyTCR) for downstream analysis. Users can browse attributes such as study metadata, clonotype count per sample, and several diveristy metrics. 
+The raw sequencing data were processed with MiXCR using a specifc library preset for each study and further downsampled by read number allowing for comparison between samples. Normalization is crucial for separating biological signal from technical noise. Next, output from MiXCR is reformatted and input into [pyTCR](https://github.com/Mangul-Lab-USC/pyTCR) for downstream analysis. Users can browse attributes such as study metadata, clonotype count per sample, and several diveristy metrics. 
 
 > [!WARNING]
 > The package work is in progress.
