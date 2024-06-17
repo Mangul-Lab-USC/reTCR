@@ -92,12 +92,14 @@ setClass("Motif",
 #' @slot basic contains basic metrics
 #' @slot diversity contains diversity metrics
 #' @slot clonality contains clonality metrics
+#' @slot hill contains Hill numbers
 #' @exportClass reTCRProj
 setClass("reTCRProj",
   slots = c(
     data = "data.frame",
     basic = "Basic",
     diversity = "Diversity",
-    clonality = "Clonality"
+    clonality = "Clonality",
+    hill = "data.frame"
   )
 )

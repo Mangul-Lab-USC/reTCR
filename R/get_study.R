@@ -1,6 +1,7 @@
 source("R/utils-basic.R")
 source("R/utils-diversity.R")
 source("R/utils-clonality.R")
+source("R/utils-hill.R")
 
 #' Get pyTCR data of a project
 #'
@@ -25,12 +26,14 @@ get_study <- function(id, attr_col) {
   basic <- .get_basic(data = data, attr_col = attr_col)
   diversity <- .get_diversity(data = data, attr_col = attr_col)
   clonality <- .get_clonality(data = data, attr_col = attr_col)
+  hill <- .get_hill_numbers(df = data)
 
   return(methods::new(
     "reTCRProj",
     data = data,
     basic = basic,
     diversity = diversity,
-    clonality = clonality
+    clonality = clonality,
+    hill = hill
   ))
 }

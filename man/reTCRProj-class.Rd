@@ -17,5 +17,7 @@ A class to represent a reTCR project
 \item{\code{diversity}}{contains diversity metrics}
 
 \item{\code{clonality}}{contains clonality metrics}
+
+\item{\code{hill}}{contains Hill numbers}
 }}
 

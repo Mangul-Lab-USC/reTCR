@@ -134,7 +134,7 @@ print(proj@clonality@abundance_top)
 print(proj@clonality@abundance_rare)
 ```
 
-## 3.2 Clonality Visualization
+### 3.2 Clonality Visualization
 
 ```r
 # let's store clonal proportion in `clonal_data`
@@ -154,4 +154,11 @@ reTCR::plot_reads_group_abundance(proj@clonality@abundance_top)
 
 # plot reads group abbundance in rare 100 clonotypes
 reTCR::plot_reads_group_abundance(proj@clonality@abundance_rare)
+```
+
+## 4. Hill numbers
+
+```r
+# get hill numbers
+print(proj@hill)
 ```
