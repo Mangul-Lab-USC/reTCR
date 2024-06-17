@@ -70,7 +70,7 @@ setClass("Clonality",
 
 #' Class "Motif"
 #'
-#' A class to represent motif data
+#' A class to represent motif metrics
 #'
 #' @slot aa_spectratype aa spectratype data
 #' @slot aa_max_spectratype aa max spectratype data

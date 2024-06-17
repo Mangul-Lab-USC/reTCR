@@ -3,7 +3,6 @@
 #' This function plots the relative abundance for all clonotypes.
 #'
 #' @param data A data frame of relative abundance for all clonotypes.
-#' @param attr_col Character. Attribute column name.
 #'
 #' @return A ggplot2 plot of relative abundance for all clonotypes.
 #' @export

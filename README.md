@@ -156,7 +156,17 @@ reTCR::plot_reads_group_abundance(proj@clonality@abundance_top)
 reTCR::plot_reads_group_abundance(proj@clonality@abundance_rare)
 ```
 
-## 4. Hill numbers
+## 4. Segment usage metrics
+
+```r
+# Top n highest clonotypes
+reTCR::get_top_n_clonotypes(proj@data, 15, "cmv_status")
+
+# Bottom n lowest clonotypes
+reTCR::get_bottom_n_clonotypes(proj@data, 20, "cmv_status")
+```
+
+## 5. Hill numbers
 
 ```r
 # get hill numbers

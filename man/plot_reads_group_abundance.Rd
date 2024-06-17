@@ -8,8 +8,6 @@ plot_reads_group_abundance(data)
 }
 \arguments{
 \item{data}{A data frame of relative abundance for top 100 clonotypes.}
-
-\item{attr_col}{Character. Attribute column name.}
 }
 \value{
 A ggplot2 plot of reads group abundance for top 100 clonotypes.

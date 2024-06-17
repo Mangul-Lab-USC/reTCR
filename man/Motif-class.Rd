@@ -5,7 +5,7 @@
 \alias{Motif-class}
 \title{Class "Motif"}
 \description{
-A class to represent motif data
+A class to represent motif metrics
 }
 \section{Slots}{
 

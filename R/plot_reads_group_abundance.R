@@ -3,7 +3,6 @@
 #' This function plots reads group abundance for top 100 clonotypes.
 #'
 #' @param data A data frame of relative abundance for top 100 clonotypes.
-#' @param attr_col Character. Attribute column name.
 #'
 #' @return A ggplot2 plot of reads group abundance for top 100 clonotypes.
 #' @export

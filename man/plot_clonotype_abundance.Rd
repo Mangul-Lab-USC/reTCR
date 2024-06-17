@@ -8,8 +8,6 @@ plot_clonotype_abundance(data)
 }
 \arguments{
 \item{data}{A data frame of relative abundance for all clonotypes.}
-
-\item{attr_col}{Character. Attribute column name.}
 }
 \value{
 A ggplot2 plot of relative abundance for all clonotypes.
