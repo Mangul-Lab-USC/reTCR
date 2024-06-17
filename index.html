@@ -190,10 +190,9 @@
 <span></span>
 <span><span class="co"># relative abundance (in rare 100 clonotypes)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">clonality</span><span class="op">@</span><span class="va">abundance_rare</span><span class="op">)</span></span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="id_32-clonality-visualization">3.2 Clonality Visualization<a class="anchor" aria-label="anchor" href="#id_32-clonality-visualization"></a>
-</h2>
+<div class="section level3">
+<h3 id="id_32-clonality-visualization">3.2 Clonality Visualization<a class="anchor" aria-label="anchor" href="#id_32-clonality-visualization"></a>
+</h3>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># let's store clonal proportion in `clonal_data`</span></span>
 <span><span class="va">clonal_data</span> <span class="op">&lt;-</span> <span class="va">proj</span><span class="op">@</span><span class="va">clonality</span><span class="op">@</span><span class="va">clonal_prop</span></span>
@@ -212,6 +211,14 @@
 <span></span>
 <span><span class="co"># plot reads group abbundance in rare 100 clonotypes</span></span>
 <span><span class="fu">reTCR</span><span class="fu">::</span><span class="fu"><a href="reference/plot_reads_group_abundance.html">plot_reads_group_abundance</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">clonality</span><span class="op">@</span><span class="va">abundance_rare</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="id_4-hill-numbers">4. Hill numbers<a class="anchor" aria-label="anchor" href="#id_4-hill-numbers"></a>
+</h2>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># get hill numbers</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">proj</span><span class="op">@</span><span class="va">hill</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
