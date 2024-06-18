@@ -25,11 +25,14 @@ library(reTCR)
 
 proj <- reTCR::get_study(id="PRJNA473147", attr_col="cmv_status")
 
-# view data
+# get MIXCR data
 print(proj@data)
+
+# get sample metadata
+print(proj@metadata)
 ```
 
-## 1. Basic Metrics
+## 1. Basic metrics
 
 ```r
 # summary data
@@ -57,7 +60,7 @@ print(proj@basic@convergence)
 print(proj@basic@spectratype)
 ```
 
-### 1.2 Statistical Analysis
+### 1.2 Statistical analysis
 
 D'Agostino normality test
 
@@ -77,7 +80,7 @@ library(stats)
 shapiro.test(proj@basic@summary_data$clonotype_count)
 ```
 
-## 2. Diversity Metrics
+## 2. Diversity metrics
 
 ```r
 # shannon index values
@@ -96,7 +99,7 @@ print(proj@diversity@chao1)
 print(proj@diversity@gini_coeff)
 ```
 
-### 2.2 Diversity Visualization
+### 2.2 Diversity visualization
 
 ```r
 reTCR::plot_diversity_index(proj@diversity@shannon, "shannon_index", "cmv_status")
@@ -114,7 +117,7 @@ reTCR::plot_diversity_index(proj@diversity@chao1, "chao1", "cmv_status")
 reTCR::plot_diversity_index(proj@diversity@gini_coeff, "gini_coeff", "cmv_status")
 ```
 
-## 3. Clonality Metrics
+## 3. Clonality metrics
 
 ```r
 # most frequent clonotypes
@@ -139,7 +142,7 @@ print(proj@clonality@abundance_top)
 print(proj@clonality@abundance_rare)
 ```
 
-### 3.2 Clonality Visualization
+### 3.2 Clonality visualization
 
 ```r
 # let's store clonal proportion in `clonal_data`
@@ -161,7 +164,30 @@ reTCR::plot_reads_group_abundance(proj@clonality@abundance_top)
 reTCR::plot_reads_group_abundance(proj@clonality@abundance_rare)
 ```
 
-## 4. Segment usage metrics
+## 4. Motif metrics
+
+```r
+# Amino acid spectratype
+print(proj@motif@aa_spectra)
+
+# Amino acid max spectratype
+print(proj@motif@aa_max_spectra)
+
+# Amino acid motif count table
+print(proj@motif@aa_motif_count)
+
+# Most abundant amino acid motif per sample
+print(proj@motif@aa_most_motif)
+```
+
+### 4.2 Motif visualization
+
+```r
+# plot amino acid motif counts
+reTCR::plot_motifs(proj@motif@aa_motif_count, "cmv_status", 20)
+```
+
+## 5. Segment usage metrics
 
 ```r
 # Top n highest clonotypes
@@ -171,7 +197,7 @@ reTCR::get_top_n_clonotypes(proj@data, 15, "cmv_status")
 reTCR::get_bottom_n_clonotypes(proj@data, 20, "cmv_status")
 ```
 
-## 5. Hill numbers
+## 6. Hill numbers
 
 ```r
 # get hill numbers

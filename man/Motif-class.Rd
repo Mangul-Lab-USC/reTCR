@@ -10,10 +10,12 @@ A class to represent motif metrics
 \section{Slots}{
 
 \describe{
-\item{\code{aa_spectratype}}{aa spectratype data}
+\item{\code{aa_spectra}}{Amino acid spectratype}
 
-\item{\code{aa_max_spectratype}}{aa max spectratype data}
+\item{\code{aa_max_spectra}}{Amino acid max spectratype}
 
-\item{\code{aa_motif_count}}{aa motif count data}
+\item{\code{aa_motif_count}}{Amino acid motif count table}
+
+\item{\code{aa_most_motif}}{Most abundant amino acid motif per sample}
 }}
 

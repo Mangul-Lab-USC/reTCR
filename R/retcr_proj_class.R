@@ -72,15 +72,17 @@ setClass("Clonality",
 #'
 #' A class to represent motif metrics
 #'
-#' @slot aa_spectratype aa spectratype data
-#' @slot aa_max_spectratype aa max spectratype data
-#' @slot aa_motif_count aa motif count data
+#' @slot aa_spectra Amino acid spectratype
+#' @slot aa_max_spectra Amino acid max spectratype
+#' @slot aa_motif_count Amino acid motif count table
+#' @slot aa_most_motif Most abundant amino acid motif per sample
 #' @exportClass Motif
 setClass("Motif",
   slots = c(
-    aa_spectratype = "data.frame",
-    aa_max_spectratype = "data.frame",
-    aa_motif_count = "data.frame"
+    aa_spectra = "data.frame",
+    aa_max_spectra = "data.frame",
+    aa_motif_count = "data.frame",
+    aa_most_motif = "data.frame"
   )
 )
 
@@ -88,18 +90,22 @@ setClass("Motif",
 #'
 #' A class to represent a reTCR project
 #'
-#' @slot data contains the main data for the project
+#' @slot data contains the MIXCR data for the project
+#' @slot metadata contains the sample metadata
 #' @slot basic contains basic metrics
 #' @slot diversity contains diversity metrics
 #' @slot clonality contains clonality metrics
+#' @slot motif contains motif metrics
 #' @slot hill contains Hill numbers
 #' @exportClass reTCRProj
 setClass("reTCRProj",
   slots = c(
     data = "data.frame",
+    metadata = "data.frame",
     basic = "Basic",
     diversity = "Diversity",
     clonality = "Clonality",
+    motif = "Motif",
     hill = "data.frame"
   )
 )
