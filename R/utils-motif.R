@@ -10,8 +10,8 @@
   for (aa in aa_list) {
     for (i in seq_len(nchar(aa) - k + 1)) {
       aamotif <- substr(aa, i, i + k - 1)
-      aa_motif_list[[aamotif]] <- aa_motif_list[[aamotif]] %||% 0 + 1
-    }
+      aa_motif_list[aamotif] <- ifelse(is.null(aa_motif_list[[aamotif]]), 0, aa_motif_list[[aamotif]]) + 1
+      }
   }
   return(aa_motif_list)
 }
