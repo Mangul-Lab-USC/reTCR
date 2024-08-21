@@ -10,14 +10,13 @@
   for (aa in aa_list) {
     for (i in seq_len(nchar(aa) - k + 1)) {
       aamotif <- substr(aa, i, i + k - 1)
-      aa_motif_list[aamotif] <- ifelse(is.null(aa_motif_list[[aamotif]]), 0, aa_motif_list[[aamotif]]) + 1
-      }
+      aa_motif_list[aamotif] <- ifelse(is.null(aa_motif_list[[aamotif]]),
+        0,
+        aa_motif_list[[aamotif]]
+      ) + 1
+    }
   }
   return(aa_motif_list)
-}
-
-.get_aa_motif_count <- function(data, aa_max, attr_col) {
-  return(aa_motif_count)
 }
 
 .get_motif <- function(data, attr_col) {
