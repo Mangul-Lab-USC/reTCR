@@ -2,7 +2,7 @@ pandoc: 3.1.11
 pkgdown: 2.1.0
 pkgdown_sha: ~
 articles: {}
-last_built: 2024-08-20T05:40Z
+last_built: 2024-08-21T03:28Z
 urls:
   reference: https://mangul-lab-usc.github.io/reTCR/reference
   article: https://mangul-lab-usc.github.io/reTCR/articles
